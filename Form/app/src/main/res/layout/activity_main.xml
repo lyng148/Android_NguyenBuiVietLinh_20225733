@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvFirstNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLastNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            app:layout_constraintStart_toStartOf="@id/etLastName"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvFirstNameLabel" />
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:background="#EFEFEF"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvFirstNameLabel"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintEnd_toStartOf="@id/etLastName" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:background="#EFEFEF"
+            android:padding="12dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvLastNameLabel"
+            app:layout_constraintStart_toEndOf="@id/etFirstName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGenderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/etFirstName" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/tvGenderLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvGenderLabel">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvBirthdayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birthday"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/rgGender" />
+
+        <Button
+            android:id="@+id/btnSelectBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Select"
+            android:backgroundTint="#DCDCDC"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@id/etLastName"
+            app:layout_constraintTop_toTopOf="@id/etBirthday"
+            app:layout_constraintBottom_toBottomOf="@id/etBirthday" />
+
+        <EditText
+            android:id="@+id/etBirthday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Birthday"
+            android:background="#EFEFEF"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:focusable="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/tvBirthdayLabel"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintEnd_toStartOf="@id/btnSelectBirthday" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/etBirthday"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/calendarView" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:background="#EFEFEF"
+            android:padding="12dp"
+            android:minLines="3"
+            android:gravity="top"
+            app:layout_constraintTop_toBottomOf="@id/tvAddressLabel"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintEnd_toEndOf="@id/btnSelectBirthday" />
+
+        <TextView
+            android:id="@+id/tvEmailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/etAddress" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="#EFEFEF"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintEnd_toEndOf="@id/etAddress" />
+
+        <CheckBox
+            android:id="@+id/cbTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to Terms of Use"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tvFirstNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:backgroundTint="#DCDCDC"
+            android:textColor="@android:color/black"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cbTerms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
