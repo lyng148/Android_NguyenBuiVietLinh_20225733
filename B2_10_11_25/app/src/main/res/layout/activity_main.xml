@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số nguyên"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbOdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lẻ"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbEven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số chẵn" />
+
+        <RadioButton
+            android:id="@+id/rbPrime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số nguyên tố" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPerfect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số hoàn hảo" />
+
+        <RadioButton
+            android:id="@+id/rbSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số chính phương" />
+
+        <RadioButton
+            android:id="@+id/rbFibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Fibonacci" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
