@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_games"
+        android:title="Games"
+        android:icon="@android:drawable/ic_input_add" /> <item
+    android:id="@+id/nav_apps"
+    android:title="Apps"
+    android:icon="@android:drawable/ic_menu_sort_by_size" />
+
+    <item
+        android:id="@+id/nav_search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search" />
+
+    <item
+        android:id="@+id/nav_books"
+        android:title="Books"
+        android:icon="@android:drawable/ic_menu_agenda" />
+</menu>
